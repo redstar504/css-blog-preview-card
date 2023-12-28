@@ -71,7 +71,7 @@ body {
 
 section {
   background: #fff;
-  margin-top: 2.25em;
+  margin: 2.25em 1.5rem 0;
   padding: 1.5rem;
   width: 20.375rem;
   border-radius: 1rem;
@@ -154,9 +154,9 @@ footer img {
   opacity: 0.75;
 }
 
-@media(min-width: 24rem) {
+@media(min-width: 24.5rem) {
   section {
-    width: 24rem;
+    width: 23.4375rem;
   }
 
   article main {
