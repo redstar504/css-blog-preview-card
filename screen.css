@@ -58,59 +58,50 @@ html {
 }
 
 body {
-  font: 600 1em/1.5 Figtree, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100%;
+  font: 600 1em/1.5 Figtree, sans-serif;
   background: var(--yellow);
   color: var(--black);
+  display: flex;
   flex-direction: column;
-  row-gap: 1.25rem;
-}
-
-section {
-  background: #fff;
-  margin: 2.25em 1.5rem 0;
-  padding: 1.5rem;
-  width: 20.375rem;
-  border-radius: 1rem;
-  border: 2px solid var(--black);
-  box-shadow: 8px 8px 0 var(--black);
+  justify-content: center;
+  align-items: center;
 }
 
 article {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
+  box-sizing: border-box;
+  width: 20.5625rem;
+  margin: 2.25em 1.5rem 0;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  border: 1px solid var(--black);
+  box-shadow: 8px 8px 0 0 var(--black);
+  transition: 0.2s box-shadow;
 }
 
-article > img {
-  border-radius: 0.625rem;
-  object-fit: cover;
+article:hover {
+  box-shadow: 16px 16px 0 0 var(--black);
+}
+
+article img {
   height: 12.5rem;
+  object-fit: cover;
+  border-radius: 0.625rem;
 }
 
-article main {
+header {
   display: flex;
   flex-direction: column;
   row-gap: 0.75rem;
   font-size: 0.75rem;
 }
 
-.tags {
-  margin: 0;
-}
-
-.tags li {
-  background: var(--yellow);
-  padding: 0.25rem 0.75rem;
-  border-radius: 0.25rem;
-  display: inline-block;
-  font-weight: 800;
-}
-
 h1 {
+  order: 1;
   font-weight: 800;
   font-size: 1.25rem;
 }
@@ -127,13 +118,31 @@ h1 a:hover {
   color: var(--yellow);
 }
 
+.tags {
+  order: -1;
+  margin: 0;
+}
+
+.tags li {
+  background: var(--yellow);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+  font-weight: 800;
+}
+
+span {
+  font-weight: 500;
+}
+
 p {
+  margin:-0.75rem 0 0;
   color: var(--grey);
   font-weight: 500;
   font-size: 0.875rem;
 }
 
-footer {
+article footer {
   font-weight: 800;
   display: flex;
   align-items: center;
@@ -141,7 +150,7 @@ footer {
   font-size: 0.875rem;
 }
 
-footer img {
+article footer img {
   width: 1.75rem;
   height: 1.75rem;
 }
@@ -152,14 +161,15 @@ footer img {
   font-size: .875em;
   color: #000;
   opacity: 0.75;
+  margin: 1.5em 0 -2.5em;
 }
 
-@media(min-width: 24.5rem) {
-  section {
-    width: 23.4375rem;
+@media(min-width: 27.125rem) {
+  article {
+    width: 24.125rem;
   }
 
-  article main {
+  header {
     font-size: 0.875rem;
   }
 
